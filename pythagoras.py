@@ -47,21 +47,21 @@ def generate_pairs(integers):
 
 def coprime_test(pairs, primes):
     coprime_pairs = pairs.copy()
-    for x, y in pairs:
-        prime_selection = [z for z in primes if z <= x]
+    for a, b in pairs:
+        prime_selection = [z for z in primes if z <= a]
         for prime in prime_selection:
-            if x % prime == 0 and y % prime == 0:
-                coprime_pairs.pop(coprime_pairs.index((x, y)))
+            if a % prime == 0 and b % prime == 0:
+                coprime_pairs.pop(coprime_pairs.index((a, b)))
                 break
     return coprime_pairs
 
 
 def generate_triples(coprime_pairs):
     triples = []
-    for x, y in coprime_pairs:
-        c = sqrt(x**2 + y**2)
+    for a, b in coprime_pairs:
+        c = sqrt(a**2 + b**2)
         if c - int(c) == 0:
-            triples.append((x, y, int(c)))
+            triples.append((a, b, int(c)))
     return triples
 
 
