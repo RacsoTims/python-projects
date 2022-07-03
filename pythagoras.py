@@ -3,7 +3,7 @@ Author: O. Smit
 
 Description:
 
-This script generates a certain amount of irreducible Pythagorean triples
+This script generates irreducible Pythagorean triples
 on demand.
 
 A group of three integers, a, b, and c,
